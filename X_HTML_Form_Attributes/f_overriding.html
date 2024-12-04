@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form overriding attributes</title>
+    <style>
+        input[type=text],
+        input[type=email] {
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid gray;
+            padding: 10px;
+        }
+
+        input[type=submit] {
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: aqua;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="name">Enter your name:</label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Enter your email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit" role="button"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
