@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element by HTML object collection</title>
+</head>
+
+<body>
+    <form id="myform" action="">
+        First Name : <input type="text" name="fname"><br> <br> Last Name : <input type="text" name="lname"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Display the value of each element in the form</p>
+    <button onclick="myfunction()">Display the elements</button>
+    <p id="todisplay"></p>
+
+    <script>
+        function myfunction() {
+            var a = document.forms["myform"];
+            var txt = "";
+            var i;
+            for (i = 0; i < a.length; i++) {
+                txt += a.elements[i].value + "<br>";
+            }
+            document.getElementById("todisplay").innerHTML = txt;
+        }
+    </script>
+</body>
+
+</html>

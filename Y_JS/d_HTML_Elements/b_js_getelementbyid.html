@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element by id</title>
+</head>
+
+<body>
+    <p id="testone">Hello Sanothimi</p>
+    <p id="testtwo"></p>
+    <script>
+        var idElement = document.getElementById("testone");
+        document.getElementById("testtwo").innerHTML = "The text is " + idElement.innerHTML;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loginValidation() {
+            var uname = document.myForm.username.value;
+            var pass = document.myForm.password.value;
+            if (uname == null || uname == "") {
+                alert("Field cannot be blank");
+                return false;
+            } else if (pass.length < 8) {
+                alert("Password must be more than 8 characters.");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="" onsubmit="return loginValidation()" method="POST">
+        Username : <input type="text" name="username"> <br> 
+        Password : <input type="password" name="password"> <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

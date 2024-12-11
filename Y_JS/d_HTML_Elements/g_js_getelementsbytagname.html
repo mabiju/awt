@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element by Tag name</title>
+</head>
+
+<body>
+    <p>Hello Sanothimi Campus</p>
+    <p id="testtwo"></p>
+    <script>
+        var a = document.getElementsByTagName("p");
+        document.getElementById("testtwo").innerHTML = "The text is " + a[0].innerHTML;
+    </script>
+</body>
+
+</html>

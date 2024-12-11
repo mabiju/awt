@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            return a / b;
+        }
+        var a = add(13, 4);
+        var b = subtract(13, 4);
+        var c = multiply(13, 4);
+        var d = divide(13, 4);
+
+
+        document.getElementById("result").innerHTML = "Sum is " + a + "<br>Difference " + b + "<br>Product " + c + "<br>DIvision " + d;
+    </script>
+</body>
+
+</html>
