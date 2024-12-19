@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest example</title>
+</head>
+
+<body>
+    <h1>Get user details</h1>
+    <button id="getUserBtn">Get User</button>
+
+    <script>
+        // function to get user details
+        function getUserData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/2', true);
+            xhr.onreadystatechange = function () {
+                /* 0- unsent
+                1- opened
+                2- headers received
+                3- loading
+                4- done */
+                if (xhr.readyState === 4) {// request is completed
+                    if (xhr.status === 200) { // successful response
+                        console.log(xhr.responseText); // responsing the data in console log
+                    } else {
+                        console.error('Something went wrong'.xhr.statusText);
+                    }
+                }
+            };
+            xhr.send(); // sending the request
+        }
+
+        // event listener for the button
+        document.getElementById("getUserBtn").addEventListener("click", getUserData);
+    </script>
+
+
+</body>
+
+</html>

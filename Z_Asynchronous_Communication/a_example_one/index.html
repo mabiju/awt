@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest Object</title>
+</head>
+
+<body>
+    <div id="myBox">
+        <p>AJAX to display the dynamic content on button click</p>
+        <button type="button" onclick="displayfile()">Click to display the contents of the file</button>
+    </div>
+    <script>
+        function displayfile() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("myBox").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "myfile.txt");
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
