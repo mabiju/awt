@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpel XMLHttpRequest Example</title>
+</head>
+<body>
+    <h1>Get user Details</h1>
+    <button id="getUserDetails">Get user</button>
+    <p id="display"></p>
+    <script>
+        //function to get the user details
+        function getUserDetails(){
+            // create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // configuring GET request for the URL
+            xhr.open('GET','https://jsonplaceholder.typicode.com/users/1',true);
+
+            // setup a function to handle the response
+            xhr.onload = function(){
+                if(xhr.status >= 200 && xhr.status < 300){
+                    // parsing the JSON response
+                    var user = JSON.parse(xhr.responseText);
+
+                    // Display the user data
+                    document.getElementById("display").innerHTML = 
+                    "Name: " + user.name + "<br>" + 
+                    "Email: " + user.email + "<br>" + 
+                    "Phone: " + user.phone; 
+                }else{
+                    document.getElementById("display").innerHTML = "Error getting data";
+                }
+            };
+
+            // Handling network errors
+            xhr.onerror = function(){
+                document.getElementById("display").innerHTML = "Something went wrong";
+            };
+
+            // sending the request
+            xhr.send();
+        }
+        // Event listener for the button
+        document.getElementById("getUserDetails").addEventListener("click",getUserDetails)
+    </script>
+</body>
+</html>
