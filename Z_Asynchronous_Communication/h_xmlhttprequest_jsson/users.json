@@ -1,0 +1,28 @@
+{
+    "arrayOfUsers":[
+        {
+            "imgUrl": "images/photo1.jpg",
+            "name": "Mahesh Bhatt",
+            "roll": 11,
+            "address": "pokhara"
+        },
+        {
+            "imgUrl": "images/photo2.jpg",
+            "name": "Sujan Sodari",
+            "roll": 12,
+            "address": "butwal"
+        },
+        {
+            "imgUrl": "images/photo3.jpg",
+            "name": "John Doe",
+            "roll": 14,
+            "address": "tokyo"
+        },
+        {
+            "imgUrl": "images/photo4.jpg",
+            "name": "Suresh Bahadur Diyal",
+            "roll": 16,
+            "address": "bhairahawa"
+        }
+    ]
+}
